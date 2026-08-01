@@ -18,7 +18,7 @@ export function Experience() {
         <div className="relative mb-12">
           <a
             href={profile.cvUrl}
-            download="Malik_Hannan_Resume.pdf"
+            download="Malik Hannan.pdf"
             onClick={playClick}
             className="inline-flex shrink-0 items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
           >

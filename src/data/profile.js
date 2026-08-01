@@ -1,4 +1,4 @@
-import cvUrl from '../assets/Ujjwal_Kumar_Rai_Resume.pdf';
+import cvUrl from '../assets/Malik Hannan.pdf';
 
 export const profile = {
   name: 'Malik Hannan',
