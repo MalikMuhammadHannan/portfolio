@@ -4,9 +4,6 @@ import { DepthField } from '@/components/motion/DepthField';
 import { Hero } from '@/components/sections/Hero';
 import { About } from '@/components/sections/About';
 import { Experience } from '@/components/sections/Experience';
-import { Work } from '@/components/sections/Work';
-import { Awards } from '@/components/sections/Awards';
-import { Blog } from '@/components/sections/Blog';
 
 export default function App() {
   return (
@@ -19,9 +16,6 @@ export default function App() {
         <Hero />
         <About />
         <Experience />
-        <Work />
-        <Awards />
-        <Blog />
       </main>
 
       <Footer />

@@ -15,7 +15,7 @@ export function Hero() {
         <source src={bgVideo} type="video/mp4" />
       </video>
 
-      <h1 className="hero-heading">All I know is I've never been bored.</h1>
+      <h1 className="hero-heading">Building scalable web applications, end to end.</h1>
 
       <div className="hero-actions">
         <button

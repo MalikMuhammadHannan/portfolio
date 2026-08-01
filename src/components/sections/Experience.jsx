@@ -1,8 +1,7 @@
 import { Download } from 'lucide-react';
 import { profile } from '@/data/profile';
-import { experience, startups } from '@/data/experience';
+import { experience, education } from '@/data/experience';
 import { useClickSound } from '@/hooks/useClickSound';
-import { formatPeriod } from '@/lib/utils';
 import './Experience.css';
 
 export function Experience() {
@@ -19,7 +18,7 @@ export function Experience() {
         <div className="relative mb-12">
           <a
             href={profile.cvUrl}
-            download="Ujjwal_Kumar_Rai_Resume.pdf"
+            download="Malik_Hannan_Resume.pdf"
             onClick={playClick}
             className="inline-flex shrink-0 items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
           >
@@ -41,7 +40,6 @@ export function Experience() {
                 </ul>
               </div>
               <div className="flex items-center gap-2 md:w-1/5 md:justify-end">
-                <img src={exp.logo} alt={exp.company} className="size-6 shrink-0 rounded object-contain" />
                 {exp.link && exp.link !== '#' ? (
                   <a
                     href={exp.link}
@@ -57,30 +55,21 @@ export function Experience() {
               </div>
             </li>
           ))}
+        </ul>
 
-          {startups.map((s) => (
-            <li key={s.name} className="flex flex-col gap-4 py-8 md:flex-row md:items-center md:justify-between">
-              <div className="text-sm text-muted-foreground md:w-1/5">{formatPeriod(s.foundedDate)}</div>
+        <h3 className="mb-4 text-sm font-medium tracking-widest text-muted-foreground uppercase">Education</h3>
+        <ul className="experience-list mb-14 divide-y divide-border">
+          {education.map((edu) => (
+            <li
+              key={edu.institution}
+              className="flex flex-col gap-4 py-8 md:flex-row md:items-center md:justify-between"
+            >
+              <div className="text-sm text-muted-foreground md:w-1/5">{edu.period}</div>
               <div className="md:w-3/5">
-                <h3 className="mb-1.5 text-lg font-semibold tracking-tight text-foreground">
-                  {s.role}
-                </h3>
-                <ul className="list-disc space-y-1 pl-4 text-sm leading-relaxed text-muted-foreground">
-                  {s.description.map((point) => (
-                    <li key={point}>{point}</li>
-                  ))}
-                </ul>
+                <h3 className="mb-1.5 text-lg font-semibold tracking-tight text-foreground">{edu.degree}</h3>
               </div>
               <div className="flex items-center gap-2 md:w-1/5 md:justify-end">
-                <img src={s.logo} alt={s.name} className="size-6 shrink-0 rounded object-contain" />
-                <a
-                  href={s.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-medium text-foreground hover:underline"
-                >
-                  {s.name}
-                </a>
+                <span className="text-sm font-medium text-foreground">{edu.institution}</span>
               </div>
             </li>
           ))}

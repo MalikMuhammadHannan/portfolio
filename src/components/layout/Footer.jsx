@@ -1,14 +1,10 @@
-import { Mail } from 'lucide-react';
-import { FaGithub, FaLinkedin, FaReddit, FaHackerNews } from 'react-icons/fa6';
 import { useClickSound } from '@/hooks/useClickSound';
 import './Footer.css';
 
 const FOLLOW_LINKS = [
-  { label: 'GitHub', href: 'https://github.com/spacesdrive', icon: FaGithub },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/u-k-r/', icon: FaLinkedin },
-  { label: 'Reddit', href: 'https://www.reddit.com/user/mrujjwalkr/', icon: FaReddit },
-  { label: 'Hacker News', href: 'https://news.ycombinator.com/user?id=valzor', icon: FaHackerNews },
-  { label: 'Medium', href: 'https://medium.com/@ujjwal_kumar_rai', icon: Mail },
+  { label: 'malikhannan.dev@gmail.com', href: 'mailto:malikhannan.dev@gmail.com' },
+  { label: '+92 333-136-8190', href: 'tel:+923331368190' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/malik-hannan-b12b8a244/' },
 ];
 
 export function Footer() {
@@ -18,9 +14,7 @@ export function Footer() {
     <footer id="connect-footer" className="footer-panel">
       <p className="footer-tagline">Let's get physical or keep it digital</p>
       <a
-        href="https://www.linkedin.com/in/u-k-r/"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="mailto:hannanmalik228@gmail.com"
         onClick={playClick}
         className="footer-headline"
       >
@@ -32,7 +26,7 @@ export function Footer() {
           <a
             key={social.label}
             href={social.href}
-            target="_blank"
+            target={social.href.startsWith('#') ? undefined : '_blank'}
             rel="noopener noreferrer"
             onClick={playClick}
             className="footer-follow-link"
@@ -42,7 +36,7 @@ export function Footer() {
         ))}
       </div>
 
-      <p className="footer-credit">{new Date().getFullYear()} Ujjwal Kumar Rai</p>
+      <p className="footer-credit">{new Date().getFullYear()} Malik Hannan</p>
     </footer>
   );
 }

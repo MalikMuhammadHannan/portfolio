@@ -41,7 +41,7 @@ export function Navbar() {
             onClick={() => goTo('hero')}
             className="rounded-full border border-dotted border-border bg-background/80 px-3.5 py-1.5 text-sm font-bold tracking-widest text-foreground uppercase shadow-sm backdrop-blur-md"
           >
-            Ferion
+            Malik Hannan
           </button>
 
           <nav className="hidden items-center gap-2 lg:flex">

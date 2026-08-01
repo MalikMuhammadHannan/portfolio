@@ -1,3 +1,4 @@
+import { skills } from '@/data/skills';
 import './About.css';
 
 export function About() {
@@ -11,40 +12,27 @@ export function About() {
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div className="about-copy">
           <p className="mb-6 text-lg leading-relaxed font-medium text-foreground">
-            I'm going to be honest with you. I used to think something was wrong with
-            me. Everyone around me had a plan. Doctor. Engineer. Pilot. Pick a lane,
-            stay in it, master it, retire. I couldn't do it. Not because I was lazy.
-            The opposite, actually. I wanted to do everything. Build things. Break
-            things. Learn things nobody taught me. Solve problems that hadn't been
-            named yet. Help people in ways that didn't fit a job title. Every time I
-            got good at something, I wanted to learn the next thing. People called it
-            a lack of focus. I called it being alive. School didn't help. The whole
-            system was basically a memory competition. Memorise this. Reproduce it.
-            Get graded. Repeat.
-          </p>
-
-          <p className="mb-6 text-base leading-relaxed text-muted-foreground">
-            I had one rule: don't memorise what you can look up. Which made me a
-            terrible student and a decent thinker.
-            <br />
-            I asked ChatGPT once, "What do you call someone obsessed with learning
-            everything and can't stick to one field?"
-            <br />
-            It said polymath. Turns out there's an actual word for it. And it's not a
-            mental illness.
+            Full Stack Software Engineer with 2.5+ years of experience building scalable web
+            applications using React.js, Next.js, TypeScript, Node.js, Django, and FastAPI.
           </p>
 
           <p className="text-base leading-relaxed text-muted-foreground">
-            Polymath. Polyhistor. Sounds fancy. Sounds like someone who has it figured
-            out. In reality, it just means I was the kid in class wondering why we had
-            to pick one thing when the world clearly needed people who understood
-            many things. I still don't have one answer when people ask what I do. I
-            build things. I break things. I write. I learn. I create.
-            <br />
-            Some call it impressive. Some call it scattered. I've stopped trying to
-            decide which one is right. All I know is I've never been bored. And I
-            think that counts for something.
+            I've worked across POS systems, AI-powered applications, and CMS platforms, spanning
+            frontend, backend, and database layers. I'm skilled in API development, system
+            integration, and performance optimization, with hands-on experience across
+            PostgreSQL, MongoDB, Supabase, OpenAI, Pinecone, Plaid, and Sentry.
           </p>
+        </div>
+
+        <div className="about-skills mt-14 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
+          {skills.map((group) => (
+            <div key={group.label}>
+              <h3 className="mb-2 text-xs font-semibold tracking-widest text-primary uppercase">
+                {group.label}
+              </h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{group.items.join(', ')}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
